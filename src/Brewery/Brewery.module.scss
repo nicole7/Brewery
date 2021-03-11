@@ -1,9 +1,25 @@
 .breweryContainer {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
 }
 
 .breweryCardContainer {
     display: flex;
     flex-direction: row;
+}
+
+.pageButtons {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.previousButton {
+    margin-right: 300px;
+}
+
+.nextButton {
+    margin-left: 300px;
 }

@@ -5,10 +5,22 @@ import { getBreweries } from '../BreweryAPI/BreweryAPI';
 
 const Brewery = () => {
     const [breweries, setBreweries] = useState([]);
+    const [page, setPage] = useState(0);
+
+    const onClickHandler = (buttonType) => {
+        let pageCounter = page;
+        if (buttonType === "previous" && page > 0) {
+            console.log('that tickles')
+            setPage(pageCounter -= 1);
+        } else if (buttonType === "next") {
+            console.log("watch it")
+            setPage(pageCounter += 1);
+        }
+    }
 
     useEffect(() => { 
         const getBrewery = async () => {
-            const apiResponse = await getBreweries();
+            const apiResponse = await getBreweries(page);
             const aggregatedData = apiResponse.map(brewery => {
                 return { "name": brewery.name, "id": brewery.id, "type": brewery.brewery_type }
               });
@@ -17,8 +29,7 @@ const Brewery = () => {
         }
         
         getBrewery();
-        console.log('breweries', breweries)
-    })
+    }, [page])
     
     return (
         <div className={styles.breweryContainer}>
@@ -31,7 +42,16 @@ const Brewery = () => {
                         breweryType={brewery.type}
                     />     
                 )}
-           </div>
+            </div>
+            <div className={styles.pageButtons}>
+                <button className={styles.previousButton} onClick={() => onClickHandler('previous')}>
+                    Previous
+                </button>
+                <button className={styles.nextButton} onClick={() => onClickHandler('next')}>
+                    Next
+                </button>
+            </div>
+            
         </div>
     )
     
