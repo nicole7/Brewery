@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './BreweryCard.module.scss';
 import Brewery from '../Brewery';
 
