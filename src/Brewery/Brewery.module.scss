@@ -1,25 +1,27 @@
 .breweryContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 300px;
-}
-
-.breweryCardContainer {
+    flex: 1;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .breweryCardContainer {
     display: flex;
     flex-direction: row;
-}
-
-.pageButtons {
+    margin: 20px;
+  }
+  
+  .buttonContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 59.9%;
+  }
+  
+  .button {
+    text-align: center;
     margin: 10px;
-}
-
-.previousButton {
-    margin-right: 300px;
-}
-
-.nextButton {
-    margin-left: 300px;
-}
+  }
+  

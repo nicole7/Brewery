@@ -10,10 +10,8 @@ const Brewery = () => {
     const onClickHandler = (buttonType) => {
         let pageCounter = page;
         if (buttonType === "previous" && page > 0) {
-            console.log('that tickles')
             setPage(pageCounter -= 1);
         } else if (buttonType === "next") {
-            console.log("watch it")
             setPage(pageCounter += 1);
         }
     }
@@ -43,11 +41,11 @@ const Brewery = () => {
                     />     
                 )}
             </div>
-            <div className={styles.pageButtons}>
-                <button className={styles.previousButton} onClick={() => onClickHandler('previous')}>
+            <div className={styles.buttonContainer}>
+                <button className={styles.button} onClick={() => onClickHandler('previous')}>
                     Previous
                 </button>
-                <button className={styles.nextButton} onClick={() => onClickHandler('next')}>
+                <button className={styles.button} onClick={() => onClickHandler('next')}>
                     Next
                 </button>
             </div>
