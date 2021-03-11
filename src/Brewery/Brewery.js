@@ -1,15 +1,14 @@
 import './Brewery.module.scss';
 import BreweryCard from './BreweryCard/BreweryCard';
-
-
 import BreweryAPI from '../BreweryAPI/BreweryAPI';
 
 const Brewery = () => {
     return (
         <div>
-            <h1>Brewery</h1>
+            Brewery
         </div>
     )
+    
 }
 
 export default Brewery;
