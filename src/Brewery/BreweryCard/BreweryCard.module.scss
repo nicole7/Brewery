@@ -1,0 +1,31 @@
+.breweryCardContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    align-items: center;
+}
+
+.breweryCardHeader {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.breweryCardTitle {
+    display: flex;
+}
+
+.breweryCardId {
+    display: flex;
+    margin-left: 5px;
+}
+
+.breweryCardBody {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.breweryCardDescription {
+
+}
