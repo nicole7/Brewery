@@ -1,4 +1,4 @@
-import Brewery from './Brewery';
+import Brewery from '../Brewery/Brewery';
 
 const BreweryAPI = () => {
     return (

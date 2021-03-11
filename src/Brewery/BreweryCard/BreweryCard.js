@@ -1,5 +1,5 @@
 import './BreweryCard.module.scss';
-import Brewery from '../Brewery/Brewery';
+import Brewery from '../Brewery';
 
 const BreweryCard = () => {
     return (

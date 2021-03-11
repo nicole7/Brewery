@@ -1,8 +1,8 @@
 import './Brewery.module.scss';
-import BreweryCard from '../BreweryCard/BreweryCard';
+import BreweryCard from './BreweryCard/BreweryCard';
 
 
-import BreweryAPI from './BreweryAPI';
+import BreweryAPI from '../BreweryAPI/BreweryAPI';
 
 const Brewery = () => {
     return (
