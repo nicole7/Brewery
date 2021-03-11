@@ -1,21 +1,26 @@
 import React from 'react';
 import styles from './BreweryCard.module.scss';
-import Brewery from '../Brewery';
 
-const BreweryCard = () => {
+const BreweryCard = ({
+    key,
+    breweryId,
+    breweryName,
+    breweryType
+}) => {
+
     return (
-        <div className={styles.breweryCardContainer}>
+        <div className={styles.breweryCardContainer} key={key}>
             <div className={styles.breweryCardHeader}>
                 <div className={styles.breweryCardTitle}>
-                    Brewery Card Title
+                    {breweryName}
                 </div>
                 <div className={styles.breweryCardId}>
-                    Id 
+                    {breweryId}
                 </div>
             </div>
             <div className={styles.breweryCardBody}>
                 <div className={styles.breweryCardDescription}>
-                    Description
+                    {breweryType}
                 </div>
             </div>
         </div>

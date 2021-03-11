@@ -4,30 +4,34 @@ import BreweryCard from './BreweryCard/BreweryCard';
 import { getBreweries } from '../BreweryAPI/BreweryAPI';
 
 const Brewery = () => {
-    const [breweries, setBreweries] = useState({});
+    const [breweries, setBreweries] = useState([]);
 
     useEffect(() => { 
         const getBrewery = async () => {
             const apiResponse = await getBreweries();
             const aggregatedData = apiResponse.map(brewery => {
-                return {
-                    id: brewery.id,
-                    title: brewery.name,
-                    description: brewery.description
-                };
-            })
+                return { "name": brewery.name, "id": brewery.id, "type": brewery.brewery_type }
+              });
             setBreweries(aggregatedData);
+            return aggregatedData;
         }
         
         getBrewery();
+        console.log('breweries', breweries)
     })
     
-
     return (
         <div className={styles.breweryContainer}>
             <div className={styles.breweryCardContainer}>
-                <BreweryCard />
-            </div>
+                {breweries.map((brewery, key) =>
+                    < BreweryCard
+                        key={key}
+                        breweryId={brewery.id}
+                        breweryName={brewery.name}
+                        breweryType={brewery.type}
+                    />     
+                )}
+           </div>
         </div>
     )
     
