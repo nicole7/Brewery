@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import Brewery from '../src/Brewery/Brewery'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>First commit</h1>
+      <Brewery />
     </div>
   );
 }
