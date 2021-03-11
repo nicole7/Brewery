@@ -11,7 +11,7 @@ const BreweryCard = ({
     return (
         <div className={styles.breweryCardContainer} key={key}>
             <div className={styles.breweryCardHeader}>
-                <div className={styles.breweryCardTitle}>
+                <div className={styles.breweryCardName}>
                     {breweryName}
                 </div>
                 <div className={styles.breweryCardId}>

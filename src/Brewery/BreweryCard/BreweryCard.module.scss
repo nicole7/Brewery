@@ -1,32 +1,35 @@
 .breweryCardContainer {
     display: flex;
     flex-direction: column;
-    margin: 5px;
-    align-items: center;
-    border: 1px solid black;
 }
 
 .breweryCardHeader {
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
-}
-
-.breweryCardTitle {
-    display: flex;
-}
-
-.breweryCardId {
-    display: flex;
-    margin-left: 5px;
+   display: flex;
+   flex-direction: row;
+   border: 1px solid black;
+   width: 340px;
+   height: 65px;
+   justify-content: space-between;
 }
 
 .breweryCardBody {
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
+   text-align: center;
+   border: 1px solid black;
+   height: 225px;
+    width: 340px;
 }
 
-.breweryCardDescription {
+.breweryCardName {
+   font-size: 15px;
+   margin: 10px;
+}
 
+.breweryCardId {
+   font-size: 15px;
+   margin: 10px;
+}
+
+.breweryCardType {
+   margin-top: 95px;
+   font-size: 15px;
 }
